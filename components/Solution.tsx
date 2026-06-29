@@ -41,7 +41,7 @@ const agents = [
     laymanIcon: "📲",
     laymanTitle: "What it does in plain English",
     laymanText:
-      "Every morning at 9 AM, AdoptBot silently scans every SBI customer. It finds Priya — ₹80,000 idle, never used investments. It sends her a message that says: 'Your money is earning 3.5%. One tap could make it 12%.' It includes a direct link that opens YONO on the exact investment screen. No login. No searching. One tap. If she ignores it, the agent waits 48 hours and tries a different angle. After 3 attempts it gives her 30 days of silence before trying again.",
+      "Every morning at 9 AM, AdoptBot silently scans every customer. It finds Priya — ₹80,000 idle, never used investments. It sends her a message that says: 'Your money is earning 3.5%. One tap could make it 12%.' It includes a direct link that opens the banking app on the exact investment screen. No login. No searching. One tap. If she ignores it, the agent waits 48 hours and tries a different angle. After 3 attempts it gives her 30 days of silence before trying again.",
 
     techIcon: "⚙️",
     techTitle: "How it's built",
@@ -49,12 +49,12 @@ const agents = [
       "n8n Schedule trigger: runs 9 AM daily",
       "Supabase SELECT query: balance > ₹50K AND has_investment = false AND last_nudge > 30 days",
       "SplitInBatches node: processes customers one by one to avoid API rate limits",
-      "Three specialist sub-agents: UPI Agent, Investment Agent, Insurance Agent — each with a different Groq prompt and YONO deep link",
+      "Three specialist sub-agents: UPI Agent, Investment Agent, Insurance Agent — each with a different Groq prompt and app deep link",
       "n8n Wait node: 48hr follow-up with social proof message",
       "After 3 touches: sets DO_NOT_DISTURB flag in Supabase for 30 days",
     ],
 
-    channels: ["WhatsApp", "YONO Deep Link", "In-App Push"],
+    channels: ["WhatsApp", "App Deep Link", "In-App Push"],
   },
   {
     id: "engagebot",

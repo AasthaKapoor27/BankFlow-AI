@@ -415,7 +415,7 @@ function AdoptWorkflow() {
           <FlowBox
             agentCode="MINI AGENT 2B"
             name="UPI Activation Agent"
-            sub={"Groq → micro-demo message\n'Link UPI in 30 seconds'\nDeep link → YONO UPI setup"}
+            sub={"Groq → micro-demo message\n'Link UPI in 30 seconds'\nDeep link → UPI setup"}
             color={G}
           />
         </div>
@@ -424,7 +424,7 @@ function AdoptWorkflow() {
           <FlowBox
             agentCode="MINI AGENT 2C"
             name="Investment Nudge Agent"
-            sub={"Groq → SIP/FD comparison\nwith personalised rupee numbers\nDeep link → YONO Invest"}
+            sub={"Groq → SIP/FD comparison\nwith personalised rupee numbers\nDeep link → Investment portal"}
             color={G}
           />
         </div>
@@ -433,7 +433,7 @@ function AdoptWorkflow() {
           <FlowBox
             agentCode="MINI AGENT 2D"
             name="Insurance Awareness Agent"
-            sub={"Groq → risk story relevant\nto age and life stage\nDeep link → YONO Insurance"}
+            sub={"Groq → risk story relevant\nto age and life stage\nDeep link → Insurance portal"}
             color={G}
           />
         </div>
@@ -456,7 +456,7 @@ function AdoptWorkflow() {
       />
 
       <CalloutBox
-        text="In plain English: Every morning AdoptBot silently scans every customer. It finds Ankit — ₹1.2L sitting idle, never touched investments. Sends him a WhatsApp with exact rupee numbers and one tap to start a SIP inside YONO. If he ignores it, the agent waits 48 hours and tries again."
+        text="In plain English: Every morning AdoptBot silently scans every customer. It finds Ankit — ₹1.2L sitting idle, never touched investments. Sends him a WhatsApp with exact rupee numbers and one tap to start a SIP inside the app. If he ignores it, the agent waits 48 hours and tries again."
         bg="#001A0D"
         borderColor={G}
       />
@@ -516,7 +516,7 @@ function EngageWorkflow() {
           <FlowBox
             agentCode="MINI AGENT 3D"
             name="WhatsApp Message Agent"
-            sub={"Groq generates message with personalised numbers\nSarvam translates to Hindi if needed\nTwilio sends + deep link to YONO"}
+            sub={"Groq generates message with personalised numbers\nSarvam translates to Hindi if needed\nTwilio sends + deep link to app"}
             color={O}
           />
         </div>
@@ -525,7 +525,7 @@ function EngageWorkflow() {
           <FlowBox
             agentCode="MINI AGENT 3E"
             name="In-App Push Agent"
-            sub={"Groq generates 60-char push notification copy\nFirebase FCM delivers to YONO app\nDeep link opens exact feature on tap"}
+            sub={"Groq generates 60-char push notification copy\nFirebase FCM delivers to mobile app\nDeep link opens exact feature on tap"}
             color={O}
           />
         </div>

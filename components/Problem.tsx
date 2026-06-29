@@ -12,8 +12,8 @@ const cards = [
   },
   {
     emoji: "📱",
-    heading: "Priya downloads YONO",
-    body: "A 28-year-old professional in Mumbai downloads the SBI YONO app. Uses it once to check her balance. Never comes back. She has ₹80,000 sitting idle earning 3.5% interest.",
+    heading: "Priya downloads the banking app",
+    body: "A 28-year-old professional in Mumbai downloads the mobile banking app. Uses it once to check her balance. Never comes back. She has ₹80,000 sitting idle earning 3.5% interest.",
     impact: "Zero cross-sell. Because no one nudged her.",
     accent: "var(--green)",
     glowRgba: "rgba(0, 255, 136, 0.18)",
@@ -195,7 +195,7 @@ export default function Problem() {
         >
           These aren't edge cases.
           <br />
-          This is happening to millions of SBI customers every single day.
+          This is happening to millions of banking customers every single day.
         </p>
       </div>
 
