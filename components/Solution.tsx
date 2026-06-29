@@ -14,7 +14,7 @@ const agents = [
     laymanIcon: "🔔",
     laymanTitle: "What it does in plain English",
     laymanText:
-      "When Karan's last car EMI clears, EngageBot notices within seconds. It understands this means ₹14,000/month just freed up in his life. It sends him a WhatsApp: 'Congratulations on clearing your loan! That ₹14,000 could become ₹32L in 10 years as a SIP. Want to start one?' For older customers like Ramesh who don't use WhatsApp, it makes an actual phone call — in Hindi — using an AI voice that sounds natural. Ramesh hears it, presses 1, and is marked as interested for a human advisor to follow up.",
+      "When Sunil's last car EMI clears, EngageBot notices within seconds. It understands this means ₹14,000/month just freed up in his life. It sends him a WhatsApp: 'Congratulations on clearing your loan! That ₹14,000 could become ₹32L in 10 years as a SIP. Want to start one?' For older customers like Ramesh who don't use WhatsApp, it makes an actual phone call — in Hindi — using an AI voice that sounds natural. Ramesh hears it, presses 1, and is marked as interested for a human advisor to follow up.",
 
     techIcon: "⚙️",
     techTitle: "How it's built",

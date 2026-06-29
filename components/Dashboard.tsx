@@ -197,24 +197,10 @@ function CustomerRow({
    OVERVIEW TAB
 ───────────────────────────────────────────────────────────────────── */
 function OverviewTab() {
-  // Feed state — starts with all 6 entries, new one added every 3 s
-  const [feed, setFeed] = useState(
-    FEED_POOL.slice(0, 6).map((e, i) => ({ ...e, uid: i }))
+  // Feed state — starts with all 6 entries, no rotation to keep Ramesh at pos 1
+  const [feed] = useState(
+    FEED_POOL.map((e, i) => ({ ...e, uid: i }))
   );
-  const poolIdx = useRef(6);
-
-  const addEntry = useCallback(() => {
-    const next = FEED_POOL[poolIdx.current % FEED_POOL.length];
-    poolIdx.current += 1;
-    setFeed((prev) =>
-      [{ ...next, uid: Date.now() }, ...prev].slice(0, 6)
-    );
-  }, []);
-
-  useEffect(() => {
-    const t = setInterval(addEntry, 3000);
-    return () => clearInterval(t);
-  }, [addEntry]);
 
   return (
     <>

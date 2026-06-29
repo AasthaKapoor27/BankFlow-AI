@@ -374,7 +374,7 @@ function AcquireWorkflow() {
       />
 
       <CalloutBox
-        text="In plain English: When Priya fills a home loan form at 11 PM, AcquireBot wakes up instantly, scores her as HOT, and sends a personalised WhatsApp referencing her ₹45L inquiry — all within 60 seconds. No human involved."
+        text="In plain English: When Karan fills a home loan form at 11 PM, AcquireBot wakes up instantly, scores him as HOT, and sends a personalised WhatsApp referencing his ₹45L inquiry — all within 60 seconds. No human involved."
         bg="#1A1500"
         borderColor={Y}
       />
