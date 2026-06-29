@@ -1,5 +1,5 @@
 # BankFlow AI 🚀
-**SBI AI Hackathon @ GFF 2026 Submission**
+
 
 BankFlow AI is an agentic AI platform that acquires, onboards, and retains banking customers — autonomously. Built entirely on free, open-source infrastructure to ensure no customer data leaves Indian infrastructure (critical for RBI compliance).
 
