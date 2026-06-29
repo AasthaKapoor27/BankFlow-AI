@@ -3,6 +3,33 @@
 /* ── Data ──────────────────────────────────────────────────────────── */
 const agents = [
   {
+    id: "engagebot",
+    pillar: "PILLAR 03",
+    name: "EngageBot",
+    tagline: "Listens to every transaction. Acts on every opportunity.",
+    accent: "var(--orange)",
+    accentRaw: "#FF6B00",
+    glowRgba: "rgba(255,107,0,0.18)",
+
+    laymanIcon: "🔔",
+    laymanTitle: "What it does in plain English",
+    laymanText:
+      "When Ankit's last car EMI clears, EngageBot notices within seconds. It understands this means ₹14,000/month just freed up in his life. It sends him a WhatsApp: 'Congratulations on clearing your loan! That ₹14,000 could become ₹32L in 10 years as a SIP. Want to start one?' For older customers like Ramesh who don't use WhatsApp, it makes an actual phone call — in Hindi — using an AI voice that sounds natural. Ramesh hears it, presses 1, and is marked as interested for a human advisor to follow up.",
+
+    techIcon: "⚙️",
+    techTitle: "How it's built",
+    techBullets: [
+      "Supabase Realtime webhook: fires on every new transaction event",
+      "Mini Agent 3A — Life Event Classifier: Groq reads raw transaction and returns structured JSON: {event: 'emi_cleared', opportunity: 'sip', urgency: 'high'}",
+      "Mini Agent 3B — Channel Router: age ≥ 55 + no app usage = voice call in Hindi; WhatsApp active = WhatsApp message; app active + young = in-app push",
+      "Voice path: Groq generates Hindi script → Sarvam AI TTS converts to natural speech → Twilio places real phone call → keypress captured (1=YES, 2=NO)",
+      "WhatsApp path: Groq generates message with personalised numbers → Twilio sends",
+      "All outcomes logged to Supabase → visible on dashboard instantly",
+    ],
+
+    channels: ["AI Voice Call 🎙️", "WhatsApp", "Hindi/Regional", "In-App Push"],
+  },
+  {
     id: "acquirebot",
     pillar: "PILLAR 01",
     name: "AcquireBot",
@@ -55,33 +82,6 @@ const agents = [
     ],
 
     channels: ["WhatsApp", "App Deep Link", "In-App Push"],
-  },
-  {
-    id: "engagebot",
-    pillar: "PILLAR 03",
-    name: "EngageBot",
-    tagline: "Listens to every transaction. Acts on every opportunity.",
-    accent: "var(--orange)",
-    accentRaw: "#FF6B00",
-    glowRgba: "rgba(255,107,0,0.18)",
-
-    laymanIcon: "🔔",
-    laymanTitle: "What it does in plain English",
-    laymanText:
-      "When Ankit's last car EMI clears, EngageBot notices within seconds. It understands this means ₹14,000/month just freed up in his life. It sends him a WhatsApp: 'Congratulations on clearing your loan! That ₹14,000 could become ₹32L in 10 years as a SIP. Want to start one?' For older customers like Ramesh who don't use WhatsApp, it makes an actual phone call — in Hindi — using an AI voice that sounds natural. Ramesh hears it, presses 1, and is marked as interested for a human advisor to follow up.",
-
-    techIcon: "⚙️",
-    techTitle: "How it's built",
-    techBullets: [
-      "Supabase Realtime webhook: fires on every new transaction event",
-      "Mini Agent 3A — Life Event Classifier: Groq reads raw transaction and returns structured JSON: {event: 'emi_cleared', opportunity: 'sip', urgency: 'high'}",
-      "Mini Agent 3B — Channel Router: age ≥ 55 + no app usage = voice call in Hindi; WhatsApp active = WhatsApp message; app active + young = in-app push",
-      "Voice path: Groq generates Hindi script → Sarvam AI TTS converts to natural speech → Twilio places real phone call → keypress captured (1=YES, 2=NO)",
-      "WhatsApp path: Groq generates message with personalised numbers → Twilio sends",
-      "All outcomes logged to Supabase → visible on dashboard instantly",
-    ],
-
-    channels: ["AI Voice Call 🎙️", "WhatsApp", "Hindi/Regional", "In-App Push"],
   },
 ];
 

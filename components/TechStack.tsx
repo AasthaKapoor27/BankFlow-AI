@@ -222,12 +222,9 @@ export default function TechStack() {
             margin: "0 auto",
           }}
         >
-          This isn't a cost-cutting compromise.
-          <br />
-          Open-source models mean no customer data leaves Indian
-          infrastructure —{" "}
+          While architected as a unified system, this submission's core innovation is the Engagement layer —{" "}
           <span style={{ color: "var(--yellow)" }}>
-            critical for RBI compliance.
+            AI that listens to every transaction and acts in the customer's own language and channel.
           </span>
         </p>
       </div>

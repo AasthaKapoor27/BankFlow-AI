@@ -14,28 +14,28 @@ const FEED_POOL = [
     badgeColor: "green",
   },
   {
-    id: 1,
-    dot: "yellow",
-    main: "AcquireBot → Priya Sharma → WhatsApp sent · replied YES · Mumbai",
-    sub: "Home loan ₹45L · replied in 4 mins · 9:03 AM",
-    badgeText: "converted",
-    badgeColor: "green",
-  },
-  {
-    id: 2,
-    dot: "green",
-    main: "AdoptBot → Ankit Mehta → SIP nudge · deep link tapped · Pune",
-    sub: "No investment · ₹1.2L idle · 9:15 AM",
-    badgeText: "SIP started",
-    badgeColor: "green",
-  },
-  {
     id: 3,
     dot: "orange",
     main: "EngageBot → Sunita Rao → WhatsApp in Telugu · Hyderabad",
     sub: "EMI cleared · awaiting reply · 9:22 AM",
     badgeText: "awaiting",
     badgeColor: "yellow",
+  },
+  {
+    id: 5,
+    dot: "red",
+    main: "EngageBot → Mohan Das → Voice call answered · Bhopal",
+    sub: "EMI cleared · pressed 1 · 9:44 AM",
+    badgeText: "interested",
+    badgeColor: "green",
+  },
+  {
+    id: 1,
+    dot: "yellow",
+    main: "AcquireBot → Priya Sharma → WhatsApp sent · replied YES · Mumbai",
+    sub: "Home loan ₹45L · replied in 4 mins · 9:03 AM",
+    badgeText: "converted",
+    badgeColor: "green",
   },
   {
     id: 4,
@@ -46,11 +46,11 @@ const FEED_POOL = [
     badgeColor: "grey",
   },
   {
-    id: 5,
-    dot: "red",
-    main: "EngageBot → Mohan Das → Voice call answered · Bhopal",
-    sub: "EMI cleared · pressed 1 · 9:44 AM",
-    badgeText: "interested",
+    id: 2,
+    dot: "green",
+    main: "AdoptBot → Ankit Mehta → SIP nudge · deep link tapped · Pune",
+    sub: "No investment · ₹1.2L idle · 9:15 AM",
+    badgeText: "SIP started",
     badgeColor: "green",
   },
 ];
@@ -231,6 +231,11 @@ function OverviewTab() {
         <MetricCard value="38"   label="Conversions"           sub="15.4% conversion rate"    glowColor="#00FF88" />
         <MetricCard value="12"   label="Voice calls placed"    sub="8 answered · 4 missed"    glowColor="#FF2D2D" />
         <MetricCard value="₹0"   label="API Cost Today"        sub="all free tier"             glowColor="#00B4FF" />
+      </div>
+      <div style={{ textAlign: "center", marginTop: 12, marginBottom: 32 }}>
+        <p style={{ fontSize: "0.75rem", color: "#888", fontStyle: "italic", fontFamily: "'Inter', sans-serif", margin: 0 }}>
+          * Illustrative data — demonstrates dashboard behavior at scale
+        </p>
       </div>
 
       {/* Feed heading */}

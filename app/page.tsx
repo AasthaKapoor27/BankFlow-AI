@@ -1,6 +1,9 @@
 import Navbar       from "@/components/Navbar";
 import Hero          from "@/components/Hero";
 import Problem       from "@/components/Problem";
+import Walkthrough   from "@/components/Walkthrough";
+import StarFeature   from "@/components/StarFeature";
+import SupportingAgents from "@/components/SupportingAgents";
 import ArchitectureLayers from "@/components/ArchitectureLayers";
 import Architecture  from "@/components/Architecture";
 import Solution      from "@/components/Solution";
@@ -12,14 +15,17 @@ export default function Home() {
   return (
     <main className="main-container">
       <Navbar />
-      <Hero />          {/* Section 1 */}
-      <Problem />       {/* Section 2 */}
-      <ArchitectureLayers /> {/* Section 3 */}
-      <Architecture />  {/* Section 4 */}
-      <Solution />      {/* Section 5 */}
-      <Dashboard />     {/* Section 6 */}
-      <TechStack />     {/* Section 7 */}
-      <Footer />        {/* Section 8 */}
+      <Hero />               {/* Step 1 */}
+      <Problem />            {/* Step 2: Trimmed Ramesh pension story */}
+      <Walkthrough />        {/* Step 3: EngageBot 4-sec walkthrough */}
+      <StarFeature />        {/* Step 4: AI Voice Call deep-dive */}
+      <SupportingAgents />   {/* Step 5: Priya/Ankit stories & Intro to other agents */}
+      <ArchitectureLayers /> {/* Step 6: 6 layers */}
+      <Architecture />       {/* Step 7: The Full Picture (Reordered) */}
+      <Solution />           {/* Step 8: Pillar Cards (Reordered) */}
+      <Dashboard />          {/* Step 9: Dashboard (Reordered feed) */}
+      <TechStack />          {/* Step 10: Tech Stack (Updated impact stats) */}
+      <Footer />
     </main>
   );
 }

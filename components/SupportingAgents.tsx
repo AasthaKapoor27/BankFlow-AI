@@ -1,77 +1,74 @@
 "use client";
 
-const cards = [
+const remainingCards = [
   {
-    emoji: "🔔",
-    heading: "Ramesh's pension is credited",
-    body: "A 62-year-old retired teacher in Varanasi receives his monthly pension at 9:01 AM. The bank sees this transaction. Does nothing. Ramesh manually moves the money to another bank for a Fixed Deposit.",
-    impact: "A massive deposit opportunity lost forever.",
-    accent: "var(--orange)",
-    glowRgba: "rgba(255, 107, 0, 0.18)",
-    glowSoft: "rgba(255, 107, 0, 0.07)",
+    emoji: "📋",
+    heading: "Ankit fills a loan form",
+    body: "A 34-year-old in Pune fills a home loan inquiry online at 11 PM. By morning, no one has called him. By afternoon, he applies at another bank.",
+    impact: "₹45L loan lost. Because no one followed up.",
+    accent: "var(--yellow)",
+    glowRgba: "rgba(255, 230, 0, 0.18)",
+    glowSoft: "rgba(255, 230, 0, 0.07)",
+  },
+  {
+    emoji: "📱",
+    heading: "Priya downloads the banking app",
+    body: "A 28-year-old professional in Mumbai downloads the mobile banking app. Uses it once to check her balance. Never comes back. She has ₹80,000 sitting idle earning 3.5% interest.",
+    impact: "Zero cross-sell. Because no one nudged her.",
+    accent: "var(--green)",
+    glowRgba: "rgba(0, 255, 136, 0.18)",
+    glowSoft: "rgba(0, 255, 136, 0.07)",
   }
 ];
 
-export default function Problem() {
+export default function SupportingAgents() {
   return (
-    <section
-      id="problem"
-      style={{
-        background: "var(--black)",
-        padding: "100px 0 80px",
-      }}
-    >
+    <section id="supporting-agents" style={{ background: "var(--black)", padding: "40px 0 100px" }}>
       <div className="wrap">
-
-        {/* ── Eyebrow label ─────────────────────────────────────────── */}
+        
+        {/* Bridging Sentence 1 */}
         <p
-          style={{
-            textAlign: "center",
-            fontSize: "0.75rem",
-            fontWeight: 700,
-            letterSpacing: "0.16em",
-            textTransform: "uppercase",
-            color: "var(--yellow)",
-            fontFamily: "'Space Grotesk', sans-serif",
-            marginBottom: 24,
-          }}
-        >
-          WHY THIS EXISTS
-        </p>
-
-        {/* ── Section heading ────────────────────────────────────────── */}
-        <h2
           className="font-display"
           style={{
             textAlign: "center",
-            fontSize: "clamp(1.875rem, 4.5vw, 3rem)",
-            fontWeight: 800,
+            fontSize: "1.25rem",
+            fontWeight: 600,
             color: "var(--white)",
-            lineHeight: 1.2,
-            letterSpacing: "-0.025em",
-            marginBottom: 72,
-            maxWidth: 780,
-            marginLeft: "auto",
-            marginRight: "auto",
+            lineHeight: 1.6,
+            maxWidth: 700,
+            margin: "0 auto 64px",
           }}
         >
-          Banks are sitting on goldmines of data.
-          <br />
-          And doing nothing with it.
-        </h2>
+          That 4-second moment is EngageBot in action — but EngageBot doesn't work alone. It's part of a complete customer lifecycle system.
+        </p>
 
-        {/* ── Single scenario card ──────────────────────────────────── */}
+        {/* Introduction Text */}
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: "1rem",
+            color: "var(--grey)",
+            lineHeight: 1.75,
+            maxWidth: 800,
+            margin: "0 auto 48px",
+            fontFamily: "'Inter', sans-serif",
+          }}
+        >
+          <strong style={{ color: "var(--white)" }}>EngageBot is the core innovation this submission is filed under (Pillar 03: Digital Engagement)</strong> — but it works as part of an integrated 3-agent system. Here's how the other two agents support it.
+        </p>
+
+        {/* Remaining Problem Cards */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr",
-            maxWidth: 600,
-            margin: "0 auto",
+            gridTemplateColumns: "1fr 1fr",
             gap: 24,
+            maxWidth: 860,
+            margin: "0 auto 80px",
           }}
-          className="problem-grid"
+          className="problem-grid-2"
         >
-          {cards.map((card) => (
+          {remainingCards.map((card) => (
             <div
               key={card.heading}
               style={{
@@ -161,7 +158,31 @@ export default function Problem() {
             </div>
           ))}
         </div>
+
+        {/* Bridging Sentence to Architecture */}
+        <p
+          className="font-display"
+          style={{
+            textAlign: "center",
+            fontSize: "1.25rem",
+            fontWeight: 700,
+            color: "var(--white)",
+            lineHeight: 1.6,
+            maxWidth: 700,
+            margin: "0 auto",
+          }}
+        >
+          Here's exactly how that system is built, end to end.
+        </p>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .problem-grid-2 {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

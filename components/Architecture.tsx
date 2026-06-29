@@ -547,11 +547,6 @@ function EngageWorkflow() {
         color={O}
       />
 
-      <CalloutBox
-        text="In plain English: Ramesh's pension hits his account at 9:01 AM. EngageBot notices instantly. It knows Ramesh is 62, doesn't use WhatsApp, and prefers Hindi. So instead of a text he'll never see — it calls him. In Hindi. An AI voice that sounds natural tells him about an FD that would earn him ₹7,000 more per year. He presses 1. He's marked as interested. A human advisor follows up. The whole thing took 4 seconds."
-        bg="#1A0800"
-        borderColor={O}
-      />
     </div>
   );
 }
@@ -681,9 +676,9 @@ export default function Architecture() {
 
         {/* Three workflow diagrams */}
         <div style={{ display: "flex", flexDirection: "column", gap: 72 }}>
+          <EngageWorkflow />
           <AcquireWorkflow />
           <AdoptWorkflow />
-          <EngageWorkflow />
         </div>
       </div>
 
