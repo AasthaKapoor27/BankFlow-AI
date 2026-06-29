@@ -284,7 +284,9 @@ function OverviewTab() {
                 borderRadius: 8,
                 background: "#0A0A0A",
                 border: "1px solid rgba(255,255,255,0.06)",
-                animation: i === 0 ? "feedSlideIn 0.35s ease-out" : "none",
+                animation: (typeof entry.uid === "number" && entry.uid > 1000) 
+                  ? "liveFlickerHighlight 1.2s ease-out forwards" 
+                  : "none",
                 transition: "opacity 0.4s",
               }}
             >
@@ -791,6 +793,26 @@ export default function Dashboard() {
         @keyframes feedSlideIn {
           from { opacity: 0; transform: translateY(-14px); }
           to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes liveFlickerHighlight {
+          0% { 
+            opacity: 0; 
+            transform: translateY(-14px); 
+            box-shadow: 0 0 0px rgba(0,0,0,0);
+            border-color: rgba(255, 255, 255, 0.06);
+          }
+          30% { 
+            opacity: 1; 
+            transform: translateY(0); 
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+          }
+          100% { 
+            opacity: 1;
+            transform: translateY(0);
+            box-shadow: 0 0 0px rgba(0,0,0,0);
+            border-color: rgba(255, 255, 255, 0.06);
+          }
         }
       `}</style>
     </section>
