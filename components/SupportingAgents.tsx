@@ -172,7 +172,7 @@ export default function SupportingAgents() {
             margin: "0 auto",
           }}
         >
-          Here's exactly how that system is built, end to end.
+          AcquireBot and AdoptBot solve exactly these two gaps. Here's exactly how that system is built, end to end.
         </p>
       </div>
 

@@ -41,7 +41,7 @@ export default function Footer() {
               lineHeight: 1.5,
             }}
           >
-            Fintech AI Hackathon @ GFF 2026
+            SBI AI Hackathon @ GFF 2026
           </p>
         </div>
 
