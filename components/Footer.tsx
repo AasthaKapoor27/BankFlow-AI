@@ -72,7 +72,7 @@ export default function Footer() {
         {/* Right */}
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <a
-            href="https://github.com"
+            href="https://github.com/AasthaKapoor27/BankFlow-AI.git"
             target="_blank"
             rel="noopener noreferrer"
             style={{

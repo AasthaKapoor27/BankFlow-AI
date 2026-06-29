@@ -3,7 +3,7 @@
 const remainingCards = [
   {
     emoji: "📋",
-    heading: "Ankit fills a loan form",
+    heading: "Karan fills a loan form",
     body: "A 34-year-old in Pune fills a home loan inquiry online at 11 PM. By morning, no one has called him. By afternoon, he applies at another bank.",
     impact: "₹45L loan lost. Because no one followed up.",
     accent: "var(--yellow)",

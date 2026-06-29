@@ -14,7 +14,7 @@ const agents = [
     laymanIcon: "🔔",
     laymanTitle: "What it does in plain English",
     laymanText:
-      "When Ankit's last car EMI clears, EngageBot notices within seconds. It understands this means ₹14,000/month just freed up in his life. It sends him a WhatsApp: 'Congratulations on clearing your loan! That ₹14,000 could become ₹32L in 10 years as a SIP. Want to start one?' For older customers like Ramesh who don't use WhatsApp, it makes an actual phone call — in Hindi — using an AI voice that sounds natural. Ramesh hears it, presses 1, and is marked as interested for a human advisor to follow up.",
+      "When Karan's last car EMI clears, EngageBot notices within seconds. It understands this means ₹14,000/month just freed up in his life. It sends him a WhatsApp: 'Congratulations on clearing your loan! That ₹14,000 could become ₹32L in 10 years as a SIP. Want to start one?' For older customers like Ramesh who don't use WhatsApp, it makes an actual phone call — in Hindi — using an AI voice that sounds natural. Ramesh hears it, presses 1, and is marked as interested for a human advisor to follow up.",
 
     techIcon: "⚙️",
     techTitle: "How it's built",
@@ -41,7 +41,7 @@ const agents = [
     laymanIcon: "🧑‍💼",
     laymanTitle: "What it does in plain English",
     laymanText:
-      "When Ramesh fills that loan form at 11 PM, AcquireBot wakes up instantly. It reads his profile, decides he's a hot lead, and sends him a personalised WhatsApp message within 60 seconds — referencing exactly the ₹45L loan he explored. If he replies, the AI continues the conversation, answers his questions, and books a callback. If he goes silent, it follows up on day 4 and day 10 automatically.",
+      "When Karan fills that loan form at 11 PM, AcquireBot wakes up instantly. It reads his profile, decides he's a hot lead, and sends him a personalised WhatsApp message within 60 seconds — referencing exactly the ₹45L loan he explored. If he replies, the AI continues the conversation, answers his questions, and books a callback. If he goes silent, it follows up on day 4 and day 10 automatically.",
 
     techIcon: "⚙️",
     techTitle: "How it's built",

@@ -16,7 +16,7 @@ const FEED_POOL = [
   {
     id: 1,
     dot: "yellow",
-    main: "AcquireBot → Priya Sharma → WhatsApp sent · replied YES · Mumbai",
+    main: "AcquireBot → Karan Mehta → WhatsApp sent · replied YES · Pune",
     sub: "Home loan ₹45L · replied in 4 mins · 9:03 AM",
     badgeText: "converted",
     badgeColor: "green",
@@ -24,8 +24,8 @@ const FEED_POOL = [
   {
     id: 2,
     dot: "green",
-    main: "AdoptBot → Ankit Mehta → SIP nudge · deep link tapped · Pune",
-    sub: "No investment · ₹1.2L idle · 9:15 AM",
+    main: "AdoptBot → Priya Sharma → SIP nudge · deep link tapped · Mumbai",
+    sub: "No investment · ₹80,000 idle · 9:15 AM",
     badgeText: "SIP started",
     badgeColor: "green",
   },
@@ -197,11 +197,11 @@ function CustomerRow({
    OVERVIEW TAB
 ───────────────────────────────────────────────────────────────────── */
 function OverviewTab() {
-  // Feed state — starts with first 4 entries, new one added every 3 s
+  // Feed state — starts with all 6 entries, new one added every 3 s
   const [feed, setFeed] = useState(
-    FEED_POOL.slice(0, 4).map((e, i) => ({ ...e, uid: i }))
+    FEED_POOL.slice(0, 6).map((e, i) => ({ ...e, uid: i }))
   );
-  const poolIdx = useRef(4);
+  const poolIdx = useRef(6);
 
   const addEntry = useCallback(() => {
     const next = FEED_POOL[poolIdx.current % FEED_POOL.length];
@@ -470,7 +470,7 @@ function AdoptTab() {
       >
         Recent Nudges
       </p>
-      <CustomerRow name="Ankit Mehta"   detail="No investment · ₹1.2L idle"    badgeText="SIP started" badgeColor="green"  />
+      <CustomerRow name="Karan Mehta"   detail="No investment · ₹1.2L idle"    badgeText="SIP started" badgeColor="green"  />
       <CustomerRow name="Kavya Pillai"  detail="No UPI · Chennai"               badgeText="link sent"   badgeColor="yellow" />
       <CustomerRow name="Rahul Sinha"   detail="No insurance · 3 dependants"    badgeText="follow-up d2" badgeColor="grey"  />
     </>
