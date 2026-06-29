@@ -197,10 +197,32 @@ function CustomerRow({
    OVERVIEW TAB
 ───────────────────────────────────────────────────────────────────── */
 function OverviewTab() {
-  // Feed state — starts with all 6 entries, no rotation to keep Ramesh at pos 1
-  const [feed] = useState(
-    FEED_POOL.map((e, i) => ({ ...e, uid: i }))
+  // Pinned item (Ramesh)
+  const pinnedItem = { ...FEED_POOL[0], uid: "pinned" };
+  // The rotating pool (everything except Ramesh)
+  const rotatingPool = FEED_POOL.slice(1);
+  
+  // Feed state — starts with the 5 rotating entries
+  const [feed, setFeed] = useState(
+    rotatingPool.map((e, i) => ({ ...e, uid: i }))
   );
+  const poolIdx = useRef(5);
+
+  const addEntry = useCallback(() => {
+    const next = rotatingPool[poolIdx.current % rotatingPool.length];
+    poolIdx.current += 1;
+    setFeed((prev) =>
+      [{ ...next, uid: Date.now() }, ...prev].slice(0, 5)
+    );
+  }, []);
+
+  useEffect(() => {
+    const t = setInterval(addEntry, 3000);
+    return () => clearInterval(t);
+  }, [addEntry]);
+
+  // Combine pinned item with the rotating feed
+  const displayFeed = [pinnedItem, ...feed];
 
   return (
     <>
@@ -249,7 +271,7 @@ function OverviewTab() {
 
       {/* Feed entries */}
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-        {feed.map((entry, i) => {
+        {displayFeed.map((entry, i) => {
           const b = BADGE[entry.badgeColor] || BADGE.grey;
           return (
             <div
