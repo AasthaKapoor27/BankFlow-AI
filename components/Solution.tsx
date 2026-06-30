@@ -13,8 +13,19 @@ const agents = [
 
     laymanIcon: "🔔",
     laymanTitle: "What it does in plain English",
-    laymanText:
-      "When Sunil's last car EMI clears, EngageBot notices within seconds. It sends him a WhatsApp: 'Congratulations on clearing your loan! Want to start a SIP?' For older customers like Ramesh who don't use WhatsApp, it makes an actual phone call — in Hindi — using an AI voice. And when Meera's salary hike hits her account, EngageBot notices instantly. She's young and uses the app daily, so instead of a call or a WhatsApp message she might miss between meetings — it sends an in-app push notification the moment she next opens the app: 'Your income just went up — here's a mutual fund built for your new bracket.' One tap opens the exact product page. No scrolling, no searching.",
+    laymanText: (
+      <ul style={{ margin: 0, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 12 }}>
+        <li>
+          <strong>Sunil's Car EMI:</strong> When his last EMI clears, EngageBot notices within seconds. It sends him a WhatsApp: <em>'Congratulations on clearing your loan! Want to start a SIP?'</em>
+        </li>
+        <li>
+          <strong>Ramesh's Pension:</strong> For older customers who don't use WhatsApp, it makes an actual phone call — <u>in Hindi</u> — using an AI voice.
+        </li>
+        <li>
+          <strong>Meera's Salary Hike:</strong> When her salary goes up, EngageBot notices instantly. She's young and uses the app daily, so it sends an <u>in-app push notification</u> the moment she next opens the app: <em>'Your income just went up — here's a mutual fund built for your new bracket.'</em> One tap opens the exact product page. No scrolling, no searching.
+        </li>
+      </ul>
+    ),
 
     techIcon: "⚙️",
     techTitle: "How it's built",
@@ -40,8 +51,19 @@ const agents = [
 
     laymanIcon: "🧑‍💼",
     laymanTitle: "What it does in plain English",
-    laymanText:
-      "When Karan fills that loan form at 11 PM, AcquireBot wakes up instantly. It reads his profile, decides he's a hot lead, and sends him a personalised WhatsApp message within 60 seconds — referencing exactly the ₹45L loan he explored. If he replies, the AI continues the conversation, answers his questions, and books a callback. If he goes silent, it follows up on day 4 and day 10 automatically.",
+    laymanText: (
+      <ul style={{ margin: 0, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 12 }}>
+        <li>
+          <strong>Instant Wake-up:</strong> When Karan fills that loan form at 11 PM, AcquireBot wakes up instantly.
+        </li>
+        <li>
+          <strong>Smart Qualification:</strong> It reads his profile, decides he's a <u>hot lead</u>, and sends him a personalised WhatsApp message within 60 seconds — referencing exactly the ₹45L loan he explored.
+        </li>
+        <li>
+          <strong>Autonomous Follow-up:</strong> If he replies, the AI continues the conversation, answers his questions, and books a callback. If he goes silent, it follows up on day 4 and day 10 <u>automatically</u>.
+        </li>
+      </ul>
+    ),
 
     techIcon: "⚙️",
     techTitle: "How it's built",
@@ -67,8 +89,19 @@ const agents = [
 
     laymanIcon: "📲",
     laymanTitle: "What it does in plain English",
-    laymanText:
-      "Every morning at 9 AM, AdoptBot silently scans every customer. It finds Priya — ₹80,000 idle, never used investments. It sends her a message that says: 'Your money is earning 3.5%. One tap could make it 12%.' It includes a direct link that opens the banking app on the exact investment screen. No login. No searching. One tap. If she ignores it, the agent waits 48 hours and tries a different angle. After 3 attempts it gives her 30 days of silence before trying again.",
+    laymanText: (
+      <ul style={{ margin: 0, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 12 }}>
+        <li>
+          <strong>Daily Scanning:</strong> Every morning at 9 AM, AdoptBot silently scans every customer. It finds Priya — <u>₹80,000 idle</u>, never used investments.
+        </li>
+        <li>
+          <strong>Direct Deep Linking:</strong> It sends her a message: <em>'Your money is earning 3.5%. One tap could make it 12%.'</em> It includes a direct link that opens the banking app on the exact investment screen. No login. No searching. One tap.
+        </li>
+        <li>
+          <strong>Persistent yet Polite:</strong> If she ignores it, the agent waits 48 hours and tries a different angle. After 3 attempts it gives her 30 days of silence before trying again.
+        </li>
+      </ul>
+    ),
 
     techIcon: "⚙️",
     techTitle: "How it's built",
@@ -278,7 +311,7 @@ export default function Solution() {
                         {agent.laymanTitle}
                       </span>
                     </div>
-                    <p
+                    <div
                       style={{
                         fontSize: "0.875rem",
                         color: "var(--white)",
@@ -286,7 +319,7 @@ export default function Solution() {
                       }}
                     >
                       {agent.laymanText}
-                    </p>
+                    </div>
                   </div>
 
                   {/* Technical breakdown box */}
