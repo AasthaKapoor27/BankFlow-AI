@@ -9,6 +9,24 @@ const cards = [
     accent: "var(--orange)",
     glowRgba: "rgba(255, 107, 0, 0.18)",
     glowSoft: "rgba(255, 107, 0, 0.07)",
+  },
+  {
+    emoji: "🚗",
+    heading: "Sunil's last EMI clears",
+    body: "A 45-year-old customer finally pays off his 5-year car loan. ₹14,000/month just freed up in his life. The bank sees this transaction. Does nothing. He starts spending the extra cash instead of investing it.",
+    impact: "A lifetime SIP opportunity ignored.",
+    accent: "var(--green)",
+    glowRgba: "rgba(0, 255, 136, 0.18)",
+    glowSoft: "rgba(0, 255, 136, 0.07)",
+  },
+  {
+    emoji: "💰",
+    heading: "Meera's salary just went up",
+    body: "A 31-year-old software engineer in Bangalore gets a salary hike. ₹15,000 more lands in her account every month starting this cycle. The bank sees it. Does nothing. She keeps the extra money in her regular savings account earning 3.5%, never moving it anywhere better.",
+    impact: "A higher-income customer, ready to invest more — and nobody said a word.",
+    accent: "var(--yellow)",
+    glowRgba: "rgba(255, 230, 0, 0.18)",
+    glowSoft: "rgba(255, 230, 0, 0.07)",
   }
 ];
 
@@ -64,8 +82,8 @@ export default function Problem() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr",
-            maxWidth: 600,
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            maxWidth: 1100,
             margin: "0 auto",
             gap: 24,
           }}

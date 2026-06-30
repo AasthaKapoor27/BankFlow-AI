@@ -456,7 +456,7 @@ function AdoptWorkflow() {
       />
 
       <CalloutBox
-        text="In plain English: Every morning AdoptBot silently scans every customer. It finds Ankit — ₹1.2L sitting idle, never touched investments. Sends him a WhatsApp with exact rupee numbers and one tap to start a SIP inside the app. If he ignores it, the agent waits 48 hours and tries again."
+        text="In plain English: Every morning AdoptBot silently scans every customer. It finds Priya — ₹80,000 sitting idle, never touched investments. Sends her a WhatsApp with exact rupee numbers and one tap to start a SIP inside the app. If she ignores it, the agent waits 48 hours and tries again."
         bg="#001A0D"
         borderColor={G}
       />
@@ -471,6 +471,10 @@ function EngageWorkflow() {
   return (
     <div>
       <WorkflowPill label="WORKFLOW 3 — EngageBot (Pillar 03)" color={O} star />
+
+      <p style={{ color: "#ddd", fontSize: "1.05rem", lineHeight: 1.7, marginBottom: 32, marginTop: 16, fontFamily: "'Inter', sans-serif" }}>
+        One engine, three channels — EngageBot decides automatically whether to call, message, or notify, based on who's on the other end.
+      </p>
 
       <FlowBox
         name="⚡ Supabase Webhook Trigger"

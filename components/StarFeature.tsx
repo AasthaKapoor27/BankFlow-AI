@@ -67,7 +67,7 @@ export default function StarFeature() {
             </h3>
 
             <p style={{ color: "#ddd", fontSize: "1.05rem", lineHeight: 1.7, marginBottom: 32, fontFamily: "'Inter', sans-serif" }}>
-              For older demographics or customers entirely disconnected from digital apps, push notifications fail. EngageBot bridges this gap using a completely autonomous voice pipeline:
+              EngageBot routes every customer through the channel that actually reaches them — voice, WhatsApp, or in-app push — based on real behavior, not guesswork. For customers like Ramesh, who don't use banking apps, that means an actual phone call:
             </p>
 
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 16, marginBottom: 32 }}>
